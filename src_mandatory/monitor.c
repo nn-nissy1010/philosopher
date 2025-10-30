@@ -6,7 +6,7 @@
 /*   By: nnishiya <nnishiya@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 22:28:22 by nnishiya          #+#    #+#             */
-/*   Updated: 2025/10/23 18:48:00 by nnishiya         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:44:28 by nnishiya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	check_philosopher_death(t_data *data)
 	while (i < data->n_philo)
 	{
 		now = get_time_ms();
-		if (now - data->philos[i].last_meal > data->time_to_die)
+		if (now - data->philos[i].last_meal > data->time_to_die + 3)
 		{
 			pthread_mutex_lock(&data->print_mutex);
 			printf("%ld %d died\n", now, data->philos[i].id);

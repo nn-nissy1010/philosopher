@@ -6,7 +6,7 @@
 /*   By: nnishiya <nnishiya@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 22:14:35 by nnishiya          #+#    #+#             */
-/*   Updated: 2025/10/23 15:39:33 by nnishiya         ###   ########.fr       */
+/*   Updated: 2025/10/30 11:27:52 by nnishiya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void msleep(int ms)
         now = get_time_ms();
         if (now - start >= ms)
             break;
-        usleep(100);
+        usleep(50);
     }
 }
 
